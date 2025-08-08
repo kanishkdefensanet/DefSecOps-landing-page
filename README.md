@@ -1,73 +1,48 @@
-# Welcome to your Lovable project
+# Welcome to your DefSecOps project
 
-## Project info
+**DefSecOps as a Service** is a fully managed, end-to-end solution that integrates **Development (Dev)**, **Security (Sec)**, and **Operations (Ops)** into a unified, automated pipeline.  
+We enable organizations to **secure software delivery from code to cloud**, reducing vulnerabilities, meeting compliance requirements, and accelerating release cycles — all without the overhead of building internal security teams from scratch.
 
-**URL**: https://lovable.dev/projects/55cb3e33-9748-4557-bc98-9605c21200d8
+---
 
-## How can I edit this code?
+## 🚀 Key Features
 
-There are several ways of editing your application.
+- **End-to-End CI/CD Security**
+  - Integrated security checks within build pipelines.
+  - Automated dependency scanning, SAST, DAST, and container image scans.
 
-**Use Lovable**
+- **SBOM (Software Bill of Materials) Management**
+  - Continuous SBOM generation and monitoring.
+  - License compliance and vulnerability tracking.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/55cb3e33-9748-4557-bc98-9605c21200d8) and start prompting.
+- **Infrastructure as Code (IaC) Security**
+  - Terraform, CloudFormation, and Kubernetes security scanning.
+  - Drift detection and misconfiguration alerts.
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Cloud Security Posture Management (CSPM)**
+  - Continuous assessment for AWS, Azure, and GCP environments.
+  - Real-time alerting for security drifts.
 
-**Use your preferred IDE**
+- **Compliance Automation**
+  - Pre-built templates for **ISO 27001, SOC 2, PCI DSS, DPDP, RBI Guidelines**.
+  - Continuous compliance dashboards and audit-ready reports.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- **Threat Modeling & Breach Simulation**
+  - Risk-based testing aligned with real-world attack scenarios.
+  - Red-team style assessments integrated with DevOps workflows.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## 🏗️ Architecture Overview
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/55cb3e33-9748-4557-bc98-9605c21200d8) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+```mermaid
+flowchart LR
+    A[Developer Code Commit] --> B[CI/CD Pipeline]
+    B --> C[Static Analysis (SAST)]
+    B --> D[Dependency Scanning]
+    B --> E[Container Image Scanning]
+    E --> F[SBOM Generation]
+    C & D & E --> G[Security Gate]
+    G --> H[Deployment to Cloud]
+    H --> I[CSPM & Runtime Monitoring]
+    I --> J[Alerts & Reports to Dashboard]
