@@ -34,15 +34,13 @@ We enable organizations to **secure software delivery from code to cloud**, redu
 ---
 
 ## 🏗️ Architecture Overview
-
-```mermaid
 flowchart LR
     A[Developer Code Commit] --> B[CI/CD Pipeline]
     B --> C[Static Analysis (SAST)]
     B --> D[Dependency Scanning]
     B --> E[Container Image Scanning]
     E --> F[SBOM Generation]
-    C & D & E --> G[Security Gate]
+    C --> G[Security Gate]
     G --> H[Deployment to Cloud]
     H --> I[CSPM & Runtime Monitoring]
-    I --> J[Alerts & Reports to Dashboard]
+    I --> J[Alerts & Reports]
